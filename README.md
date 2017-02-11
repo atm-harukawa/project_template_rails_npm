@@ -26,11 +26,23 @@ dockerは以下のバージョンで動作することを確認しています
 ## 設定手順
 
 ### 1.Folk this Project
+ * フォークせずに自分のプロジェクトに取り込む場合は1’に進む
  * まずはこのプロジェクトをフォークしてください。
  
 ### 2.Clone As your project
- * フォークしたプロジェクトをあなたの環境にcloneしてくだ
+ * フォークしたプロジェクトをあなたの環境にcloneしてください
+ * 3にすすむ
  
+### 1' .新しいぷろじぇくとを空で作成する
+### 2' .本リポジトリを取り込む
+```shell
+git clone [あなたのプロジェクトURL]
+cd [clone 先のディレクトリ]
+git remote add project_template_rails_npm git@github.com:hiraokashi/project_template_rails_npm.git
+git pull project_template_rails_npm master
+git push origin master
+```
+
 ### 3.Bundle install and npm install
 ```shell
  docker-compose run --rm web bundle install
@@ -54,4 +66,3 @@ dockerは以下のバージョンで動作することを確認しています
 ```shell
  docker-compose up
 ```
- 
