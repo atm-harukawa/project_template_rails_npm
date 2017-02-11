@@ -43,16 +43,18 @@ git pull project_template_rails_npm master
 git push origin master
 ```
 
-### 3.Bundle install and npm install
+### 3.Build Container
+ ```shell
+ docker-compose build
+ ```
+ 
+### 4.Bundle install and npm install
 ```shell
  docker-compose run --rm web bundle install
  docker-compose run --rm web npm install
 ```
  
-### 4.Build Container
- ```shell
- docker-compose build
- ```
+
  
 ### 5.Database Initialization
 
